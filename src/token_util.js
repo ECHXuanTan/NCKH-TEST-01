@@ -7,7 +7,7 @@ export async function getTokenOrRefresh() {
 
     if (speechToken === undefined) {
         try {
-            const res = await axios.get('https://test-nckh-be-1.onrender.com/api/get-speech-token');
+            const res = await axios.get('https://nckh-test-be-00.onrender.com/api/get-speech-token');
             const token = res.data.token;
             const region = res.data.region;
             cookie.set('speech-token', region + ':' + token, {maxAge: 540, path: '/'});
